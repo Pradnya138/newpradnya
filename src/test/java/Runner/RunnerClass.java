@@ -6,7 +6,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (
 	features ={"src\\main\\resources\\Application\\login.feature"},
-	glue= {"loginstep"}
+	glue= {"loginstep"},
+	plugin= {"pretty","html:target/cucumber-reports/report1.html"},
+	publish=true
 		
 )
 public class RunnerClass extends AbstractTestNGCucumberTests
